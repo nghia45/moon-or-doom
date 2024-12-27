@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as Highcharts from "highcharts";
 import { HighchartsReact } from "highcharts-react-official";
 export const GRID_LINE_COLOR = "rgba(255, 255, 255, 0.08)";
@@ -15,7 +15,7 @@ export const INTERVAL = {
 export function App() {
   const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
   const [currentPrice, setCurrentPrice] = useState<number>();
-  const [intervalTime, setIntervalTime] = useState<number>(INTERVAL.NORMAL);
+  const [intervalTime] = useState<number>(INTERVAL.NORMAL);
   const [currentPlotLine, setCurrentPlotLine] = useState<number | null>(null);
   const [endPlotLine, setEndPlotLine] = useState<number | null>(null);
   const [currentYPlotLine, setCurrentYPlotLine] = useState<number | null>(null);
